@@ -1,6 +1,6 @@
 # protein-md-workflow
 
-Tutorial prático para preparação, execução e análise de dinâmica molecular.
+Tutorial prático para preparação, execução e análise de dinâmica molecular de uma proteína sem ligante.
 
 ## 📋 Etapas do Protocolo
 1. Download, preparação e protonação da proteína
