@@ -1,15 +1,13 @@
-# Etapa 1: Preparação da Estrutura e Protonação
+# Etapa 1: Download do modelo
 
-Nesta fase, preparamos o arquivo PDB bruto para a simulação, garantindo que a proteína esteja corretamente protonada no pH de interesse (ex: pH 7.0).
+Acesse ao site [RCSB PDB] (https://www.rcsb.org/structure/) e digite na busca o código da mioglobina 5XL0. Em **Download** **Files** clique em **Legacy** **PDB** **format**.
 
-## 1. Limpeza da Estrutura (Retirada de Hidrogênios)
-É necessário remover os hidrogênios originais do PDB para que o servidor de protonação possa reconstruí-los de acordo com o campo de força.
-* **Ferramenta:** UCSF Chimera
-* **Ação:** `Select > Chemistry > element > H` e depois `Actions > Atoms/Bonds > delete`.
+# Etapa 2: Pré-processamento da estrutura (Pymol)
 
-## 2. Protonação em pH de Interesse
-Utilizamos o servidor **PDB2PQR** para adicionar os hidrogênios e atribuir estados de ionização adequados.
-* **Campo de Força:** Recomenda-se o uso do **CHARMM** (para ser compatível com o NAMD posterior).
-* **Configuração:** Marque a opção de usar o **PROPKA** para calcular os pKa dos resíduos.
+Remova o solvente, geralmente moléculas de água, no painel superior direito. Clique no botão **A** (Action) > **remove** **waters**.
+Ative a barra de sequência no canto inferior direito clicando em **SEQ** (em versões mais atuais) ou **S** (em versões mais antigas).
+No final da sequência selecione os íons SO4 e o grupo HEME. No painel superior direito, na linha (sele) clique no botão **A** (Action) > **remove** **atoms**.
+Na maioria dos casos a estrutura do RCSB PDB não vem acompanhada de hidrogênios. Caso necessário, para garantir uma protonação padronizada nas etapas seguintes, remova hidrogênios pré-existentes clicando no botão **A** (Action) > **hydrogens** > **remove**.
+Salve o arquivo final em **File** > **Export Molecule...** no formato '.pdb' para manter a compatibilidade com o servidor 'pdb2pqr'.
 
-![Resultado do PDB2PQR](imagem-dos-resultados.png)
+## 3. Protonação em pH de interesse
