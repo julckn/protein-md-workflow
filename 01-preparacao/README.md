@@ -12,4 +12,4 @@ No final da sequência selecione os íons SO4 e o grupo HEME. No painel superior
 Na maioria dos casos a estrutura do RCSB PDB não vem acompanhada de hidrogênios. Caso necessário, para garantir uma protonação padronizada nas etapas seguintes, remova hidrogênios pré-existentes clicando no botão **A** (Action) > **hydrogens** > **remove**.
 Salve o arquivo final em **File** > **Export Molecule...** no formato '.pdb' para manter a compatibilidade com o servidor 'pdb2pqr'.
 
-## 3. Protonação em pH de interesse
+# Etapa 3: Protonação em pH de interesse
