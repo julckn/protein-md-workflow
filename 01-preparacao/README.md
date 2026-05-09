@@ -1,7 +1,7 @@
 # Etapa 1: Download do modelo
 
 * Acesse ao site [RCSB PDB](https://www.rcsb.org/structure/)
-* Busca pelo código **5XL0** (mioglobina).
+* Busca pelo código ***5XL0*** (mioglobina).
 * Em **Download Files**, escolha o formato **Legacy PDB format**.
 
 # Etapa 2: Pré-processamento da estrutura (Pymol)
