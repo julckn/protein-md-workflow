@@ -18,4 +18,4 @@
 * Em **pKa Options**: Marque a opção `Use PROPKA to assign protonation states` e insira o pH desejado (ex: 7.0).
 * Em **Forcefield Options** selecione `CHARMM` e `Internal naming scheme`.
 
-* Clique em Submit e, ao finalizar, baixe o arquivo com extensão `.pqr`.
+* Clique em **Submit** e, ao finalizar, baixe o arquivo com extensão `.pqr`.
