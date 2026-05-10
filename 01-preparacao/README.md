@@ -15,4 +15,4 @@
 # Etapa 3: Protonação em pH de interesse (PDB2PQR/APBS)
 * Acesse ao servidor [PDB2PQR](https://server.poissonboltzmann.org/pdb2pqr) (APBS).
 * Faça o upload do arquivo .pdb gerado no Pymol.
-* Em **pKa Options**: `Marque a opção Use PROPKA to assign protonation states` e insira o pH desejado (ex: 7.0).
+* Em **pKa Options**: Marque a opção `Use PROPKA to assign protonation states` e insira o pH desejado (ex: 7.0).
