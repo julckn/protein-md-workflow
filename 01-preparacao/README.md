@@ -17,5 +17,5 @@
 * Faça o upload do arquivo .pdb gerado no Pymol.
 * Em **pKa Options**: Marque a opção `Use PROPKA to assign protonation states` e insira o pH desejado (ex: 7.0).
 * Em **Forcefield Options** selecione `CHARMM` e `Internal naming scheme`.
-* Em **Additional Options**, deixe as seguintes caixas marcadas: `Ensure that new atoms are not rebuilt too close to existing atoms`, `Optimize the hydrogen bonding network` e `Remove the waters from the output file`. 
+* Em **Additional Options**, deixe as seguintes caixas marcadas: `Ensure that new atoms are not rebuilt too close to existing atoms`, `Optimize the hydrogen bonding network` e `Remove the waters from the output file`.
 * Clique em **Start Job** e, ao finalizar, baixe o arquivo com extensão `.pqr`.
