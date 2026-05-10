@@ -16,4 +16,4 @@
 * Acesse ao servidor [PDB2PQR](https://server.poissonboltzmann.org/pdb2pqr) (APBS).
 * Faça o upload do arquivo .pdb gerado no Pymol.
 * Em **pKa Options**: Marque a opção `Use PROPKA to assign protonation states` e insira o pH desejado (ex: 7.0).
-* Em **Forcefield Options** selecione `CHARMM` para o campo de força e `Internal naming scheme`.
+* Em **Forcefield Options** selecione `CHARMM` e `Internal naming scheme`.
