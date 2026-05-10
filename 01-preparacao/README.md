@@ -1,6 +1,6 @@
 # Etapa 1: Download do modelo
 
-* Acesse ao site [RCSB PDB](https://www.rcsb.org/)
+* Acesse ao banco de dados [RCSB PDB](https://www.rcsb.org/)
 * Busca pelo código *5XL0* (mioglobina).
 * Em **Download Files**, escolha o formato **Legacy PDB format**.
 
@@ -13,3 +13,4 @@
 * Salve o arquivo final em **File** > **Export Structure...** > **Export Molecule...** > **Save...**  no formato `.pdb` para manter a compatibilidade com o servidor `pdb2pqr`.
 
 # Etapa 3: Protonação em pH de interesse
+* Acesse ao servidor [PDB2PQR](https://server.poissonboltzmann.org/pdb2pqr) (APBS)
