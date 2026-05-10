@@ -6,10 +6,10 @@
 
 # Etapa 2: Pré-processamento da estrutura (Pymol)
 
-* Remova as moléculas de água (solvente), no painel superior direito. Clique no botão **A** (Action) > **remove** **waters**.
-* Ative a barra de sequência no canto inferior direito clicando em **SEQ** (em versões mais atuais) ou **S** (em versões mais antigas).
-* No final da sequência selecione os íons *SO4* e o grupo *HEME*. No painel superior direito, na linha (sele) clique no botão **A** (Action) > **remove** **atoms**.
-* Na maioria dos casos a estrutura do RCSB PDB não vem acompanhada de hidrogênios. Caso necessário, para garantir uma protonação padronizada nas etapas seguintes, remova hidrogênios pré-existentes clicando no botão **A** (Action) > **hydrogens** > **remove**.
+* Remova as moléculas de água (solvente): No painel superior direito clique em **A** (Action) > **remove** **waters**.
+* Ative a barra de sequência: No canto inferior direito clicando em **SEQ** (em versões mais atuais) ou **S** (em versões mais antigas).
+* Remova os íons *SO4* e o grupo *HEME: No final da sequência selecione-os. No painel superior direito, na linha (sele) clique no botão **A** (Action) > **remove** **atoms**.
+*Caso a estrutura original possua hidrogênios, remova-os: No painel superior direito clique em **A** (Action) > **hydrogens** > **remove**.
 * Salve o arquivo final em **File** > **Export Molecule...** no formato `.pdb` para manter a compatibilidade com o servidor `pdb2pqr` clicando em **Save...** .
 
 # Etapa 3: Protonação em pH de interesse
