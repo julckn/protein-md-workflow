@@ -12,6 +12,21 @@
 * Caso a estrutura original possua hidrogênios, remova-os: No painel superior direito clique em **A** (Action) > **hydrogens** > **remove**.
 * Salve o arquivo final em **File** > **Export Structure...** > **Export Molecule...** > **Save...**  no formato `.pdb` para manter a compatibilidade com o servidor `pdb2pqr`.
 
+* 2. Exemplo prático (O que você deve digitar):
+```python
+
+Carrega a proteína e aguarda o download completo (async=0)
+fetch 5XL0, async=0
+
+Limpeza automática
+remove solvent
+remove not polymer
+remove hydrogens
+save 5XL0_clean.pdb
+```
+
+preciso falar que é o mesmo processo, porem pela linha de comando do pymol
+
 # Etapa 3: Protonação em pH de interesse (PDB2PQR/APBS)
 * Acesse ao servidor [PDB2PQR](https://server.poissonboltzmann.org/pdb2pqr) (APBS).
 * Faça o upload do arquivo .pdb gerado no Pymol.
