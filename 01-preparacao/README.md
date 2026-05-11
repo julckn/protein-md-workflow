@@ -25,8 +25,6 @@ remove hydrogens
 save 5XL0_clean.pdb
 ```
 
-preciso falar que é o mesmo processo, porem pela linha de comando do pymol
-
 # Etapa 3: Protonação em pH de interesse (PDB2PQR/APBS)
 * Acesse ao servidor [PDB2PQR](https://server.poissonboltzmann.org/pdb2pqr) (APBS).
 * Faça o upload do arquivo .pdb gerado no Pymol.
