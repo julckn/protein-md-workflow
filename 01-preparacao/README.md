@@ -12,7 +12,10 @@
 * Caso a estrutura original possua hidrogênios, remova-os: No painel superior direito clique em **A** (Action) > **hydrogens** > **remove**.
 * Salve o arquivo final em **File** > **Export Structure...** > **Export Molecule...** > **Save...**  no formato `.pdb` para manter a compatibilidade com o servidor `pdb2pqr`.
 
-* 2. Exemplo prático (O que você deve digitar):
+Automação via Console (PyMOL)
+
+**Se preferir, você pode obter o mesmo resultado executando os comandos abaixo diretamente no console do PyMOL:**
+
 ```python
 
 Carrega a proteína e aguarda o download completo (async=0)
