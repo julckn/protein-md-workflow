@@ -4,7 +4,7 @@
 * Busca pelo código *5XL0* (mioglobina).
 * Em **Download Files**, escolha o formato **Legacy PDB format**.
 
-# Etapa 2: Pré-processamento da estrutura (Pymol)
+# Etapa 2: Pré-processamento da estrutura (PyMOL)
 
 * Remova as moléculas de água (solvente): No painel superior direito clique em **A** (Action) > **remove** **waters**.
 * Ative a barra de sequência: No canto inferior direito clique em **SEQ** (em versões mais atuais) ou **S** (em versões mais antigas).
