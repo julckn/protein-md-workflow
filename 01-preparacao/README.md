@@ -17,12 +17,13 @@
 Se preferir, você pode obter o mesmo resultado executando os comandos abaixo diretamente no console do PyMOL:
 
 ```python
-Carrega a proteína e aguarda o download completo (async=0)
+# Carrega a proteína e aguarda o download completo (async=0)
 fetch 5XL0, async=0
-Limpeza automática
+# Limpeza automática (remove solvente, íons e ligantes)
 remove solvent
 remove not polymer
 remove hydrogens
+# Salva o arquivo pronto para o PDB2PQR
 save 5XL0_clean.pdb
 ```
 
