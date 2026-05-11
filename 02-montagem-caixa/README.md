@@ -9,9 +9,11 @@ Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arqu
 ```tcl
 cd D:/Caminho/Para/Sua/Pasta
 ```
-## 2. Protocolo de Limpeza (Reset de Conectividade)
+
+## 2. Pré-tratamento: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
 
 Arquivos vindos de servidores externos como o **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal **`Maximum of 12 bonds`** (ou `too many bonds in bondlist`). Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o **AutoPSF** reconstrua os hidrogênios com precisão atômica.
+
 Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o AutoPSF reconstrua os hidrogênios com precisão atômica seguindo o campo de força CHARMM36.
 Passo 1: Carregar com trava de segurança
 
