@@ -13,6 +13,7 @@
 * Salve o arquivo final em **File** > **Export Structure...** > **Export Molecule...** > **Save...**  no formato `.pdb` para manter a compatibilidade com o servidor `pdb2pqr`.
 
 **Automação via Console (PyMOL)**
+
 Comandos para limpeza padronizada da estrutura via linha de comando:
 
 ```python
