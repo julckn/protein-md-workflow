@@ -17,10 +17,8 @@ Automação via Console (PyMOL)
 **Se preferir, você pode obter o mesmo resultado executando os comandos abaixo diretamente no console do PyMOL:**
 
 ```python
-
 Carrega a proteína e aguarda o download completo (async=0)
 fetch 5XL0, async=0
-
 Limpeza automática
 remove solvent
 remove not polymer
