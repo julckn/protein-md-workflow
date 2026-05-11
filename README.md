@@ -6,7 +6,7 @@ Tutorial prático para a preparação, execução e análise de trajetórias de 
 
 * [**01-preparacao**](./01-preparacao): Limpeza da estrutura no `PyMOL` e protonação padronizada (pH de interesse) via `PDB2PQR` ou `H++`.
 * [**02-montagem-caixa**](./02-montagem-caixa): Protocolo no `VMD` para solvatação, ionização e cálculo automático dos vetores da célula unitária (PBC).
-* [**03-configuracao-namd**](./03-configuracao-namd): Preparação do arquivo `.conf`. Definição de parâmetros (tempo/temperatura) e inserção das dimensões da caixa para um sistema infinito.
+* [**03-configuracao-namd**](./03-configuracao-namd): Edição do arquivo `.conf`. Definição de parâmetros (tempo/temperatura) e inserção das dimensões da caixa.
 * [**04-execucao-slurm**](./04-execucao-slurm): Scripts de submissão (`bash`) otimizados para uso de GPUs em clusters de alto desempenho.
 * [**05-analise-R-python**](./05-analise-R-python): Scripts de pós-processamento para extração de métricas estruturais: `RMSD`, `RMSF`, `SASA` e `RoG`.
 
