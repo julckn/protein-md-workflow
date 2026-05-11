@@ -8,3 +8,25 @@ Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arqu
 
 ```tcl
 cd D:/Caminho/Para/Sua/Pasta/02-montagem-caixa
+
+## 2. Protocolo de Limpeza (Reset de Conectividade)
+Arquivos vindos de servidores externos como o PDB2PQR podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal Maximum of 12 bonds. Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o AutoPSF reconstrua os hidrogênios com precisão atômica.
+Passo 1: Carregar com trava de segurança
+
+Este comando impede o VMD de tentar adivinhar ligações incorretas baseadas em proximidade física.
+
+```tcl
+mol new seu_arquivo.pqr autobonds off
+```
+
+Passo 2: Remover Hidrogênios e Salvar Átomos Pesados
+
+Salvaremos apenas os átomos pesados (noh), preservando os nomes de resíduos (ex: HSE, HSD) definidos na protonação.
+
+```tcl
+set sel [atomselect top "protein and noh"]
+$sel writepdb protein_clean.pdb
+mol delete top
+```
+
+    💡 Dica de Ouro: Ao usar o protein_clean.pdb no AutoPSF, o plugin consultará a topologia CHARMM36 e reconstruirá todos os hidrogênios seguindo regras químicas rigorosas, eliminando qualquer risco de instabilidade na simulação.
