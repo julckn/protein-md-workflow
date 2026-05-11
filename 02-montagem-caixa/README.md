@@ -8,6 +8,7 @@ Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arqu
 
 ```tcl
 cd D:/Caminho/Para/Sua/Pasta/02-montagem-caixa
+```
 
 ## 2. Protocolo de Limpeza (Reset de Conectividade)
 Arquivos vindos de servidores externos como o PDB2PQR podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal Maximum of 12 bonds. Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o AutoPSF reconstrua os hidrogênios com precisão atômica.
