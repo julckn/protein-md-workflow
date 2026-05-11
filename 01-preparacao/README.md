@@ -17,11 +17,11 @@
 Se preferir, você pode obter o mesmo resultado executando os comandos abaixo diretamente no console do PyMOL:
 
 ```python
-# 1. Defina o caminho onde os arquivos serão salvos
+# 1. Defina o seu caminho onde os arquivos serão salvos
 cd [caminho/da/sua/pasta]
-# 2. Baixa a estrutura e aguarda o download (async=0) para continuar
+# 2. Baixa a estrutura (async=0 garante que o PyMOL espere o download)
 fetch 5XL0, async=0
-# 3. Limpeza automática do sistema
+# 3. Limpeza automática do sistema (remove águas, íons e ligantes)
 remove solvent
 remove not polymer
 remove hydrogens
