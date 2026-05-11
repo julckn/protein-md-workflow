@@ -1,6 +1,6 @@
 # protein-md-workflow
 
-Tutorial prático para preparação, execução e análise de dinâmica molecular da mioglobina 5XL0 sem ligante.
+Tutorial prático para preparação, execução e análise de dinâmica molecular da mioglobina 5XL0.
 
 ## 📋 Etapas do Protocolo
 1. Download, pré-processamento (Pymol) e protonação da proteína (pdb2pqr)
