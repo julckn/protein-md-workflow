@@ -12,13 +12,15 @@ cd D:/Caminho/Para/Sua/Pasta
 
 ## 4.2. Ajuste de Interface: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
 
-Arquivos vindos de servidores externos como o **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal `Maximum of 12 bonds` (ou `too many bonds in bondlist`).
+Arquivos provenientes do servidor **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, disparando o erro fatal: `Error: atomsel: setbonds: too many bonds in bondlist (Maximum of 12 bonds)`.
+
+Este erro ocorre porque, ao abrir um arquivo, o VMD tenta gerar automaticamente uma rede de ligações baseada na proximidade física dos átomos. Como hidrogênios protonados externamente podem estar "sobrepostos" na visão do software, ele tenta criar conexões infinitas e trava o sistema.
 
 Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o **AutoPSF** reconstrua os hidrogênios com precisão atômica, tornando a estrutura compatível com o campo de força escolhido para a simulação.
 
-Passo 1: Carregamento Controlado com Inibição de Ligações Automáticas
+Passo 1: Importação da Estrutura e Restrição de Ligações (Autobonds Off)
 
-Este comando impede o VMD de tentar adivinhar ligações incorretas baseadas apenas na proximidade física dos átomos logo na abertura do arquivo. Isso evita que o sistema trave ao encontrar hidrogênios sobrepostos.
+Para iniciar o procedimento, devemos carregar a molécula desativando a função de detecção automática de ligações (`autobonds off`). Isso permite que o VMD leia as coordenadas dos átomos sem tentar "adivinhar" ligações incorretas, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
 
 Ainda no Tk Console, digite:
 
