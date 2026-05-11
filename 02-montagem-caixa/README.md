@@ -1,8 +1,8 @@
-# Etapa 2: Montagem da Caixa de Simulação (VMD)
+# Etapa 4: Montagem da Caixa de Simulação (VMD)
 
 Nesta etapa, utilizamos o **VMD (Visual Molecular Dynamics)** para preparar o sistema proteico, gerar a topologia, adicionar o solvente (água), neutralizar a carga com íons e calcular os parâmetros de Condições Periódicas de Contorno (PBC).
 
-## 1. Configurando o Diretório de Trabalho
+## 4.1. Configurando o Diretório de Trabalho
 Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arquivos serão salvos. 
 > **Dica para Windows:** Lembre-se de inverter as barras para `/`.
 
@@ -10,7 +10,7 @@ Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arqu
 cd D:/Caminho/Para/Sua/Pasta
 ```
 
-## 2. Pré-tratamento: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
+## 4.2. Pré-tratamento: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
 
 Arquivos vindos de servidores externos como o **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal **`Maximum of 12 bonds`** (ou `too many bonds in bondlist`). Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o **AutoPSF** reconstrua os hidrogênios com precisão atômica.
 
