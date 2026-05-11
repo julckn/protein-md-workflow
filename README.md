@@ -4,7 +4,7 @@ Tutorial prático para a preparação, execução e análise de trajetórias de 
 
 ## 📋 Etapas do Protocolo
 
-* [**01-preparacao**](./01-preparacao): Limpeza da estrutura no `PyMOL` (pré-processamento) e protonação padronizada (pH de interesse) via `PDB2PQR`.
+* [**01-preparacao**](./01-preparacao): Limpeza da estrutura no PyMOL (pré-processamento) seguida de protonação em pH de interesse via PDB2PQR.
 * [**02-montagem-caixa**](./02-montagem-caixa): Protocolo no `VMD` para solvatação, ionização e cálculo automático dos vetores da célula unitária (PBC).
 * [**03-configuracao-namd**](./03-configuracao-namd): Edição do arquivo `.conf`. Configuração das variáveis de simulação e dos limites físicos do sistema.
 * [**04-execucao-slurm**](./04-execucao-slurm): Scripts de submissão (`bash`) otimizados para uso de GPUs em clusters de alto desempenho.
