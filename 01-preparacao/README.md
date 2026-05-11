@@ -19,7 +19,7 @@ Se preferir, você pode obter o mesmo resultado executando os comandos abaixo di
 ```python
 # 1. Defina o seu caminho onde os arquivos serão salvos
 cd [caminho/da/sua/pasta]
-# 2. Baixa a estrutura (async=0 garante que o PyMOL espere o download)
+# 2. Baixe a estrutura (async=0 garante que o PyMOL espere o download)
 fetch 5XL0, async=0
 # 3. Limpeza automática do sistema (remove águas, íons e ligantes)
 remove solvent
