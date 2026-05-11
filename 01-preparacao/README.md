@@ -14,7 +14,7 @@
 
 **Automação via Console (PyMOL)**
 
-Se preferir, você pode obter o mesmo resultado executando os comandos abaixo diretamente no console do PyMOL:
+Comandos para limpeza padronizada da estrutura via linha de comando:
 
 ```python
 # 1. Defina o seu caminho onde os arquivos serão salvos
