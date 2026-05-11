@@ -1,6 +1,6 @@
 # protein-md-workflow
 
-Tutorial prático para preparação, execução e análise de dinâmica molecular da mioglobina 5XL0.
+Tutorial prático para a preparação, execução e análise de trajetórias de dinâmica molecular. Este workflow utiliza como modelo de estudo a mioglobina (PDB ID: 5XL0), abordando desde o tratamento da estrutura bruta até a extração de métricas estatísticas após simulação.
 
 ## 📋 Etapas do Protocolo
 1. Download, pré-processamento (Pymol) e protonação da proteína (pdb2pqr)
