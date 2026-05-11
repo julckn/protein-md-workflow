@@ -9,11 +9,10 @@ Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arqu
 ```tcl
 cd D:/Caminho/Para/Sua/Pasta/02-montagem-caixa
 ```
-
 ## 2. Protocolo de Limpeza (Reset de Conectividade)
 
-> [!CAUTION]
-> **Erro de Conectividade:** Arquivos vindos de servidores externos (PDB2PQR) podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal `Maximum of 12 bonds` (também exibido como `too many bonds in bondlist`). 
+É comum que o VMD apresente falhas de conectividade ao ler hidrogênios externos, disparando o erro:
+`Error: atomsel: setbonds: too many bonds in bondlist (Maximum of 12 bonds)`
 
 Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o AutoPSF reconstrua os hidrogênios com precisão atômica seguindo o campo de força CHARMM36.
 Passo 1: Carregar com trava de segurança
