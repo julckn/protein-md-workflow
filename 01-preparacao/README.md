@@ -21,7 +21,7 @@ Se preferir, você pode obter o mesmo resultado executando os comandos abaixo di
 cd [caminho/da/sua/pasta]
 # 2. Baixe a estrutura (async=0 garante que o PyMOL espere o download)
 fetch 5XL0, async=0
-# 3. Limpeza automática do sistema (remove águas, íons e ligantes)
+# 3. Limpeza automática do sistema (remove águas, íons, ligantes e hidrogênios)
 remove solvent
 remove not polymer
 remove hydrogens
