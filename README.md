@@ -9,4 +9,5 @@ Tutorial prático para a preparação, execução e análise de trajetórias de 
 03-configuracao-namd: Preparação do arquivo de configuração do NAMD. Nesta etapa, definimos os parâmetros da simulação (como tempo e temperatura) e inserimos as dimensões da caixa geradas no VMD para garantir que o sistema seja infinito.
 04-execucao-slurm: Espaço para o seu script de submissão (bash), especificando o uso de GPUs para otimizar o tempo de processamento das trajetórias.
 05-analise-R-python: Destinada aos scripts de pós-processamento para extração de dados estruturais como RMSD, RMSF, SASA e Raio de Giro (RoG).
+
 ---
