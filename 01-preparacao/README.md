@@ -19,7 +19,7 @@ Se preferir, você pode obter o mesmo resultado executando os comandos abaixo di
 ```python
 # 1. Defina o seu caminho onde os arquivos serão salvos
 cd [caminho/da/sua/pasta/de/trabalho]
-# 2. Baixa a estrutura
+# 2. Baixa a estrutura e aguarda o download (async=0) para continuar
 fetch 5XL0, async=0
 # 3. Limpeza automática do sistema
 remove solvent
