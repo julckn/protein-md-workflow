@@ -12,13 +12,15 @@ cd D:/Caminho/Para/Sua/Pasta
 
 ## 4.2. Ajuste de Interface: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
 
-Arquivos vindos de servidores externos como o **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal **`Maximum of 12 bonds`** (ou `too many bonds in bondlist`).
+Arquivos vindos de servidores externos como o **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, gerando o erro fatal `Maximum of 12 bonds` (ou `too many bonds in bondlist`).
 
-Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o **AutoPSF** reconstrua os hidrogênios com precisão atômica.
+Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o **AutoPSF** reconstrua os hidrogênios com precisão atômica, tornando a estrutura compatível com o campo de força escolhido para a simulação.
 
-Passo 1: Carregar com trava de segurança
+Passo 1: Carregamento Controlado com Inibição de Ligações Automáticas
 
-Este comando impede o VMD de tentar adivinhar ligações incorretas baseadas em proximidade física.
+Este comando impede o VMD de tentar adivinhar ligações incorretas baseadas apenas na proximidade física dos átomos logo na abertura do arquivo. Isso evita que o sistema trave ao encontrar hidrogênios sobrepostos.
+
+Ainda no Tk Console, digite:
 
 ```tcl
 mol new seu_arquivo.pqr autobonds off
