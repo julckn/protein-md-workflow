@@ -62,7 +62,7 @@ No menu principal do VMD, acesse: `Extensions` > `Modeling` > `Automatic PSF Bui
 
 Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **Step 1: Input and Output Files**.
 
-**Importante:** O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes (deste workflow), selecione e delete os arquivos desnecessários, mantendo apenas:
+**Importante:** O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes (proposta deste workflow), selecione e delete os arquivos desnecessários, mantendo apenas:
 * `top_all36_prot.rtf` (Parâmetros de proteínas).
 * `toppar_water_ions.str` (Parâmetros de água e íons).
 
