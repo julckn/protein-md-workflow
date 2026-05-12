@@ -52,10 +52,11 @@ mol new "protein_clean.pdb" type pdb
 
 ## 4.3 Geração da Topologia e Reconstrução de Hidrogênios (AutoPSF)
 
-Nesta etapa, utilizaremos o plugin **AutoPSF** para converter a lista de resíduos do PDB "limpo" em um arquivo de estrutura **PSF (Protein Structure File)** completo.
+Nesta etapa, unimos as informações de posição com as regras químicas do campo de força.
 
->***O que é a Topologia?***
->Enquanto o arquivo PDB armazena apenas as coordenadas espaciais $(x, y, z)$ , o arquivo PSF define a inteligência química do sistema: ligações, ângulos, diedros, massas e cargas parciais. O AutoPSF utiliza arquivos de topologia do campo de força **CHARMM36** para ler essas regras e reconstruir todos os hidrogênios descartados na etapa anterior com precisão geométrica.
+Entendendo os Arquivos de Estrutura:
+* **Arquivo PDB:** Armazena as coordenadas atômicas $(x, y, z)$ do sistema, definindo a posição exata de cada átomo no espaço e a organização geral da estrutura.
+* **Arquivo PSF:** Armazena a topologia do sistema, definindo as ligações químicas, ângulos, diedros, cargas parciais e tipos de átomo
 
 ### Passo 1: Abrir o plugin e configurar topologias
 No menu principal do VMD, acesse: `Extensions` > `Modeling` > `Automatic PSF Builder`.
