@@ -9,6 +9,7 @@ Abra o **Tk Console** em `Extensions` > `Tk Console` e defina a pasta onde os ar
 > **Atenção usuários de Windows:** O VMD utiliza a sintaxe do Linux/Tcl. Você deve inverter as barras do seu caminho de \ para /. 
 
 ```tcl
+# No VMD, use sempre barras inclinadas para a direita (/) mesmo no Windows
 cd D:/Caminho/Para/Sua/Pasta
 ```
 
