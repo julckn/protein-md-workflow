@@ -27,7 +27,7 @@ Para iniciar o procedimento, devemos carregar a molécula desativando a função
 Ainda no **Tk Console**, digite:
 
 ```tcl
-# O retorno '0' no console indica o ID da molécula carregada com sucesso
+# O retorno '0' no console indica o ID (identificador) da molécula carregada com sucesso.
 mol new seu_arquivo.pqr autobonds off
 ```
 
