@@ -18,8 +18,6 @@ Arquivos provenientes do servidor **PDB2PQR** podem conter geometrias de hidrog�
 
 Este erro ocorre porque o VMD tenta gerar automaticamente uma rede de ligações baseada na proximidade física dos átomos. Como alguns hidrogênios gerados externamente podem estar "sobrepostos" (com distâncias menores que o permitido), o software tenta criar conexões infinitas e trava o sistema.
 
-Utilizaremos este protocolo para "limpar" a estrutura, removendo as coordenadas conflitantes e garantindo que o **AutoPSF** reconstrua os hidrogênios com geometria ideal, tornando o sistema estável para a simulação.
-
 ### Passo 1: Importação controlada da estrutura
 
 Para evitar o travamento, carregamos a molécula desativando a detecção automática de ligações, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
@@ -27,7 +25,8 @@ Para evitar o travamento, carregamos a molécula desativando a detecção autom�
 Ainda no **Tk Console**, digite:
 
 ```tcl
-# O retorno '0' no console indica o ID da molécula carregada
+# Importa o arquivo PQR desabilitando a busca automática de ligações para evitar travamentos por sobreposição atômica.
+# O comando retorna o ID da molécula criada (ex: 0).
 mol new seu_arquivo.pqr autobonds off
 ```
 
