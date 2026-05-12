@@ -28,7 +28,7 @@ Ainda no **Tk Console**, digite:
 mol new seu_arquivo.pqr autobonds off
 ```
 
-### Passo 2: Remover hidrogênios e exportação do PDB
+### Passo 2: Remoção de hidrogênios e exportação do PDB
 
 Nesta etapa, selecionaremos apenas os átomos pesados (noh) para gerar um novo arquivo PDB. Este procedimento descarta as coordenadas problemáticas de hidrogênio, mas mantém os nomes dos resíduos (ex: HSE, HSD) para a reconstrução correta da topologia.
 
