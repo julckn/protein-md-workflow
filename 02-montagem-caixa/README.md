@@ -66,14 +66,14 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 **Importante:** O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes (deste workflow), selecione e delete os arquivos desnecessários, mantendo apenas:
 * `top_all36_prot.rtf` (Parâmetros de proteínas).
 * `toppar_water_ions.str` (Parâmetros de água e íons).
-* 
+
 ### Passo 2: Geração da estrutura
 1. Clique em **Load input files** para carregar os parâmetros selecionados.
 2. Clique no botão **I'm feeling lucky**. O plugin irá analisar a cadeia, identificar os terminais da proteína e reconstruir os átomos ausentes.
 3. Uma mensagem de *"Structure complete"* aparecerá confirmando a criação dos novos arquivos.
 
 **Resultado esperado:** O VMD criará dois arquivos essenciais no diretório: 
-* `protein_clean_autopsf.pdb`: Sua proteína agora completa, com todos os hidrogênios posicionados corretamente.
-* `protein_clean_autopsf.psf`: O arquivo de topologia estrutural necessário para o NAMD.
+* `protein_clean_autopsf.pdb`: a proteína com todos os hidrogênios posicionados corretamente.
+* `protein_clean_autopsf.psf`: o arquivo de topologia estrutural necessário para o NAMD.
 
 **Confirme se eles foram salvos na pasta de trabalho.**
