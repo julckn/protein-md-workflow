@@ -36,8 +36,7 @@ save 5XL0_clean.pdb
 4. **Opções do Campo de Força (Crítico)**
 * **Forcefield:** Selecione `CHARMM`.
 * **Naming Scheme:** Selecione `Internal naming scheme`.
-[!IMPORTANT]
-
+> [!IMPORTANT]
 ALTERAÇÃO (Nota sobre Nomenclatura): Optamos pelo `Internal naming scheme` em vez de `CHARMM` para evitar a inserção de indicadores `TER` no arquivo. Isto previne erros de *"Unparametrized Components"* no AutoPSF (VMD) durante a montagem da caixa na **Etapa 4**.
 5. Em **Additional Options**, deixe as seguintes caixas marcadas: `Ensure that new atoms are not rebuilt too close to existing atoms`, `Optimize the hydrogen bonding network` e `Remove the waters from the output file`.
 6. Por fim clique em **Start Job** e, ao finalizar, baixe o arquivo com extensão `.pqr`.
