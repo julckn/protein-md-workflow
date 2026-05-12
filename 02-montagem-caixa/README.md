@@ -20,34 +20,33 @@ Este erro ocorre porque o VMD tenta gerar automaticamente uma rede de ligações
 
 Utilizaremos este protocolo para "limpar" a estrutura, removendo as coordenadas conflitantes e garantindo que o **AutoPSF** reconstrua os hidrogênios com geometria ideal, tornando o sistema estável para a simulação.
 
-### Passo 1: Importação da estrutura e restrição de ligações (autobonds Off)
+### Passo 1: Importação controlada da estrutura
 
-Para iniciar o procedimento, devemos carregar a molécula desativando a função de detecção automática de ligações (`autobonds off`). Isso permite que o VMD leia as coordenadas dos átomos sem tentar "adivinhar" ligações incorretas, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
+Para evitar o travamento, carregamos a molécula desativando a detecção automática de ligações, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
 
 Ainda no **Tk Console**, digite:
 
 ```tcl
-# O retorno '0' no console indica o ID (identificador) da molécula carregada com sucesso.
+# O retorno '0' no console indica o ID da molécula carregada
 mol new seu_arquivo.pqr autobonds off
 ```
 
 ### Passo 2: Remoção de hidrogênios e exportação do PDB
 
-Nesta etapa, selecionaremos apenas os átomos pesados (noh) para gerar um novo arquivo PDB. Este procedimento descarta as coordenadas problemáticas de hidrogênio, mas mantém os nomes dos resíduos (ex: HSE, HSD) para a reconstrução correta da topologia.
+Nesta etapa, selecionaremos apenas os átomos pesados (carbonos, oxigênios, etc.), descartando as coordenadas problemáticas de hidrogênio para que o **AutoPSF** as reconstrua corretamente.
 
 ```tcl
 # 1. Seleciona a proteína ('all'), excluindo os hidrogênios ('noh' ou 'not hydrogen')
-# O retorno 'atomselect0' indica o nome interno que o VMD deu a este grupo de átomos na memória
+# O retorno 'atomselect0' indica o nome interno da seleção na memória.
 set sel [atomselect top "all and noh"]
-# 2. VERIFICAÇÃO CRÍTICA: Exibe o número de átomos selecionados (deve ser maior que 0)
+# 2. VERIFICAÇÃO CRÍTICA: Exibe o número de átomos selecionados (deve ser > 0)
 # O comando [$sel num] acessa a seleção e conta quantos átomos ela possui
 puts "Átomos selecionados: [$sel num]"
 # 3. Exporta a seleção para um novo arquivo PDB limpo
 $sel writepdb "protein_clean.pdb"
-# 4. Remove a estrutura original da memória para limpar a área de visualização e evitar sobreposição
+# 4. Remove a estrutura original da memória para evitar sobreposição
 mol delete top
-# 5. Carrega o novo arquivo limpo (este será usado como base para o AutoPSF)
-# O retorno '1' indica que esta é a nova molécula ativa na sessão (ID 1)
+# 5. Carrega o novo arquivo limpo (ID 1)
 mol new "protein_clean.pdb" type pdb
 ```
 
@@ -59,7 +58,7 @@ Nesta etapa, utilizaremos o plugin **AutoPSF** para converter a lista de resídu
 >Enquanto o arquivo PDB armazena apenas as coordenadas espaciais $(x, y, z)$ , o arquivo PSF define a inteligência química do sistema: ligações, ângulos, diedros, massas e cargas parciais. O AutoPSF utiliza arquivos de topologia do campo de força **CHARMM36** para ler essas regras e reconstruir todos os hidrogênios descartados na etapa anterior com precisão geométrica.
 
 ### Passo 1: Abrir o plugin e configurar topologias
-No menu principal do VMD, acesse: `Extensions > Modeling > Automatic PSF Builder`.
+No menu principal do VMD, acesse: `Extensions` > `Modeling` > `Automatic PSF Builder`.
 
 Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **Step 1: Input and Output Files**.
 
