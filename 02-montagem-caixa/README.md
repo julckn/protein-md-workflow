@@ -22,7 +22,7 @@ Passo 1: Importação da Estrutura e Restrição de Ligações (Autobonds Off)
 
 Para iniciar o procedimento, devemos carregar a molécula desativando a função de detecção automática de ligações (`autobonds off`). Isso permite que o VMD leia as coordenadas dos átomos sem tentar "adivinhar" ligações incorretas, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
 
-Ainda no Tk Console, digite:
+Ainda no **Tk Console**, digite:
 
 ```tcl
 mol new seu_arquivo.pqr autobonds off
