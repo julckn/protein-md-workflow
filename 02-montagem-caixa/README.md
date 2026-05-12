@@ -2,7 +2,7 @@
 
 Nesta etapa, utilizamos o **VMD (Visual Molecular Dynamics)** para preparar o sistema proteico, gerar a topologia, adicionar o solvente (água), neutralizar a carga com íons e calcular os parâmetros de Condições Periódicas de Contorno (PBC).
 
-## 4.1. Configurando o Diretório de Trabalho
+## 4.1 Configurando o Diretório de Trabalho
 Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arquivos serão salvos. 
 > **Dica para Windows:** Lembre-se de inverter as barras para `/`.
 
@@ -10,7 +10,7 @@ Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arqu
 cd D:/Caminho/Para/Sua/Pasta
 ```
 
-## 4.2. Ajuste de Interface: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
+## 4.2 Ajuste de Interface: Resolvendo Conflitos de Hidrogênios (PDB2PQR vs VMD)
 
 Arquivos provenientes do servidor **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, disparando o erro fatal: `Error: atomsel: setbonds: too many bonds in bondlist (Maximum of 12 bonds)`.
 
