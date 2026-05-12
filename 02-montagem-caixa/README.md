@@ -48,4 +48,18 @@ mol delete top
 Nesta etapa, utilizaremos o plugin **AutoPSF** para converter a lista de resíduos do seu PDB "limpo" em um arquivo de estrutura **PSF (Protein Structure File)** completo.
 
 >***O que é a Topologia?***
->Enquanto o arquivo PDB armazena apenas as coordenadas espaciais $(x, y, z)$ , o arquivo PSF define a inteligência química do sistema: ligações, ângulos, diedros, massas e cargas parciais. O AutoPSF utiliza arquivos de topologia do campo de força CHARMM36 para ler essas regras e reconstruir todos os hidrogênios descartados na etapa anterior com precisão geométrica.
+>Enquanto o arquivo PDB armazena apenas as coordenadas espaciais $(x, y, z)$ , o arquivo PSF define a inteligência química do sistema: ligações, ângulos, diedros, massas e cargas parciais. O AutoPSF utiliza arquivos de topologia do campo de força **CHARMM36** para ler essas regras e reconstruir todos os hidrogênios descartados na etapa anterior com precisão geométrica.
+
+###Passo 1: Abrir o Plugin e Configurar Topologias
+No menu principal do VMD, acesse: Extensions > Modeling > Automatic PSF Builder.
+Na janela que abrir, localize o painel Topology files.
+Importante: O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes, selecione e delete os arquivos desnecessários, mantendo apenas:
+* `top_all36_prot.rtf` (Parâmetros de proteínas).
+* `toppar_water_ions.str` (Parâmetros de água e íons).
+
+###Passo 2: Geração da Estrutura
+Clique em **Load input files** para carregar os parâmetros selecionados.
+Clique no botão **I'm feeling lucky**. O plugin irá analisar a cadeia, identificar os terminais da proteína e reconstruir os átomos ausentes.
+Uma mensagem de "Structure complete" aparecerá confirmando a criação dos novos arquivos.
+
+###Passo 3: Verificação dos Arquivos GeradosO AutoPSF criará dois arquivos essenciais no seu diretório de trabalho:  protein_clean_autopsf.pdb: Sua proteína agora completa, com todos os hidrogênios posicionados corretamente.protein_clean_autopsf.psf: O arquivo de topologia estrutural necessário para o NAMD.
