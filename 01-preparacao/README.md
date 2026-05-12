@@ -41,6 +41,8 @@ ALTERAÇÃO (Nota sobre Nomenclatura): Optamos pelo `Internal naming scheme` em 
 5. Em **Additional Options**, deixe as seguintes caixas marcadas: `Ensure that new atoms are not rebuilt too close to existing atoms`, `Optimize the hydrogen bonding network` e `Remove the waters from the output file`.
 6. Por fim clique em **Start Job** e, ao finalizar, baixe o arquivo com extensão `.pqr`.
 
+
+
 **Próximos Passos: Entendendo os Arquivos de Estrutura**
 
 Ao final desta etapa, você terá o arquivo PQR necessário para gerar no VMD o arquivo PDB (coordenadas) e o arquivo PSF (topologia).
