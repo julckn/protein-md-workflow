@@ -56,7 +56,7 @@ Nesta etapa, unimos as informações de posição com as regras químicas do cam
 
 Entendendo os arquivos de estrutura:
 * **Arquivo PDB:** Armazena as coordenadas atômicas $(x, y, z)$ do sistema, definindo a conformação espacial da estrutura atômica.
-* **Arquivo PSF:** Armazena a topologia do sistema, definindo as ligações químicas, ângulos, diedros, massas, cargas parciais e tipos de átomos.
+* **Arquivo PSF:** Armazena a topologia, definindo as ligações químicas, ângulos, diedros, massas, cargas parciais e tipos de átomos.
 
 ### Passo 1: Abrir o plugin e configurar topologias
 No menu principal do VMD, acesse: `Extensions` > `Modeling` > `Automatic PSF Builder`.
