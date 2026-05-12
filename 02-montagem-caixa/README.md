@@ -30,6 +30,8 @@ mol new seu_arquivo.pqr autobonds off
 
 ### Passo 2: Remover Hidrogênios e Salvar Átomos Pesados
 
+Nesta etapa, salvaremos apenas os átomos pesados (noh), preservando os nomes de resíduos (ex: HSE, HSD) definidos na protonação para que a topologia final seja gerada corretamente.
+
 Utilizaremos este protocolo para higienizar a estrutura, removendo coordenadas de hidrogênio conflitantes enquanto preservamos a identidade química dos resíduos (como HSE e HSD). Isso garante que o AutoPSF reconstrua os hidrogênios "do zero" com geometria ideal, tornando a estrutura plenamente compatível com o campo de força escolhido.
 
 Salvaremos apenas os átomos pesados (noh), preservando os nomes de resíduos (ex: HSE, HSD) definidos na protonação.
