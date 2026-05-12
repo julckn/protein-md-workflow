@@ -18,6 +18,7 @@ Este erro ocorre porque o VMD tenta gerar automaticamente uma rede de ligações
 
 Utilizaremos este protocolo para "limpar" a estrutura, removendo as coordenadas conflitantes e garantindo que o **AutoPSF** reconstrua os hidrogênios com geometria ideal, tornando o sistema estável para a simulação.
 
+
 #### Passo 1: Importação da Estrutura e Restrição de Ligações (Autobonds Off)
 
 Para iniciar o procedimento, devemos carregar a molécula desativando a função de detecção automática de ligações (`autobonds off`). Isso permite que o VMD leia as coordenadas dos átomos sem tentar "adivinhar" ligações incorretas, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
@@ -27,6 +28,7 @@ Ainda no **Tk Console**, digite:
 ```tcl
 mol new seu_arquivo.pqr autobonds off
 ```
+
 
 #### Passo 2: Remover Hidrogênios e Salvar Átomos Pesados
 
