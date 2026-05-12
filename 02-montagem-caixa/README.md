@@ -77,3 +77,6 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 * `protein_clean_autopsf.psf`: arquivo de topologia necessário para o NAMD.
 
 **Confirme se eles foram salvos na pasta de trabalho.**
+
+[!TIP]
+Nota de Eficiência: Se na Etapa 3 você utilizou o Internal naming scheme no PDB2PQR, o AutoPSF concluirá esta etapa sem alertas de "Unparametrized Components", gerando os arquivos ..._autopsf.pdb e ..._autopsf.psf instantaneamente.
