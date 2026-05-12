@@ -76,3 +76,4 @@ Uma mensagem de "Structure complete" aparecerá confirmando a criação dos novo
 O AutoPSF criará dois arquivos essenciais no seu diretório de trabalho:
 * `protein_clean_autopsf.pdb`: Sua proteína agora completa, com todos os hidrogênios posicionados corretamente.
 * `protein_clean_autopsf.psf`: O arquivo de topologia estrutural necessário para o NAMD.
+**Confirme se eles foram salvos na pasta de trabalho.**
