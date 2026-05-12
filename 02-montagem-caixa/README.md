@@ -30,16 +30,14 @@ mol new seu_arquivo.pqr autobonds off
 
 ### Passo 2: Remover Hidrogênios e Salvar Átomos Pesados
 
-Nesta etapa, salvaremos apenas os átomos pesados (noh), preservando os nomes de resíduos (ex: HSE, HSD) definidos na protonação para que a topologia final seja gerada corretamente.
-
-Utilizaremos este protocolo para higienizar a estrutura, removendo coordenadas de hidrogênio conflitantes enquanto preservamos a identidade química dos resíduos (como HSE e HSD). Isso garante que o AutoPSF reconstrua os hidrogênios "do zero" com geometria ideal, tornando a estrutura plenamente compatível com o campo de força escolhido.
-
-Salvaremos apenas os átomos pesados (noh), preservando os nomes de resíduos (ex: HSE, HSD) definidos na protonação.
+Nesta etapa, selecionaremos apenas os átomos pesados (noh) para gerar um novo arquivo PDB. Este procedimento descarta as coordenadas problemáticas de hidrogênio, mas mantém os nomes dos resíduos (ex: HSE, HSD) para a reconstrução correta da topologia.
 
 ```tcl
+# Seleciona a proteína sem hidrogênios
 set sel [atomselect top "protein and noh"]
+# Exporta a seleção para um novo arquivo
 $sel writepdb protein_clean.pdb
+# Remove a estrutura da memória do VMD para evitar acúmulo de moléculas
 mol delete top
 ```
 
-💡 Dica de Ouro: Ao usar o protein_clean.pdb no AutoPSF, o plugin consultará a topologia CHARMM36 e reconstruirá todos os hidrogênios seguindo regras químicas rigorosas, eliminando qualquer risco de instabilidade na simulação.
