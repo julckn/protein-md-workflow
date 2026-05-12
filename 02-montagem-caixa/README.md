@@ -27,6 +27,7 @@ Para iniciar o procedimento, devemos carregar a molécula desativando a função
 Ainda no **Tk Console**, digite:
 
 ```tcl
+# O retorno '0' no console indica o ID da molécula carregada com sucesso
 mol new seu_arquivo.pqr autobonds off
 ```
 
@@ -35,12 +36,19 @@ mol new seu_arquivo.pqr autobonds off
 Nesta etapa, selecionaremos apenas os átomos pesados (noh) para gerar um novo arquivo PDB. Este procedimento descarta as coordenadas problemáticas de hidrogênio, mas mantém os nomes dos resíduos (ex: HSE, HSD) para a reconstrução correta da topologia.
 
 ```tcl
-# Seleciona a proteína sem hidrogênios
-set sel [atomselect top "protein and noh"]
-# Exporta a seleção para um novo arquivo
-$sel writepdb protein_clean.pdb
-# Remove a estrutura da memória do VMD para evitar acúmulo de moléculas
+# 1. Seleciona a proteína ('all'), excluindo os hidrogênios ('noh' ou 'not hydrogen')
+# O retorno 'atomselect0' indica o nome interno que o VMD deu a este grupo de átomos na memória
+set sel [atomselect top "all and noh"]
+# 2. VERIFICAÇÃO CRÍTICA: Exibe o número de átomos selecionados (deve ser maior que 0)
+# O comando [$sel num] acessa a seleção e conta quantos átomos ela possui
+puts "Átomos selecionados: [$sel num]"
+# 3. Exporta a seleção para um novo arquivo PDB limpo
+$sel writepdb "protein_clean.pdb"
+# 4. Remove a estrutura original da memória para limpar a área de visualização e evitar sobreposição
 mol delete top
+# 5. Carrega o novo arquivo limpo (este será usado como base para o AutoPSF)
+# O retorno '1' indica que esta é a nova molécula ativa na sessão (ID 1)
+mol new "protein_clean.pdb" type pdb
 ```
 
 ## 4.3 Geração da Topologia e Reconstrução de Hidrogênios (AutoPSF)
