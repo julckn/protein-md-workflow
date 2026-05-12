@@ -55,7 +55,7 @@ No menu principal do VMD, acesse: `Extensions > Modeling > Automatic PSF Builder
 
 Na janela que abrir, localize o painel *Topology files*.
 
-Importante: O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes, selecione e delete os arquivos desnecessários, mantendo apenas:
+**Importante:** O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes, selecione e delete os arquivos desnecessários, mantendo apenas:
 * `top_all36_prot.rtf` (Parâmetros de proteínas).
 * `toppar_water_ions.str` (Parâmetros de água e íons).
 
