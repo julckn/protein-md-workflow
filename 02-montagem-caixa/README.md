@@ -14,9 +14,9 @@ cd D:/Caminho/Para/Sua/Pasta
 
 Arquivos provenientes do servidor **PDB2PQR** podem conter geometrias de hidrogênio que o VMD interpreta incorretamente, disparando o erro fatal: `Error: atomsel: setbonds: too many bonds in bondlist (Maximum of 12 bonds)`.
 
-Este erro ocorre porque, ao abrir um arquivo, o VMD tenta gerar automaticamente uma rede de ligações baseada na proximidade física dos átomos. Como hidrogênios protonados externamente podem estar "sobrepostos" na visão do software, ele tenta criar conexões infinitas e trava o sistema.
+Este erro ocorre porque o VMD tenta gerar automaticamente uma rede de ligações baseada na proximidade física dos átomos. Como alguns hidrogênios gerados externamente podem estar "sobrepostos" (com distâncias menores que o permitido), o software tenta criar conexões infinitas e trava o sistema.
 
-Utilizaremos este protocolo para "limpar" a estrutura, garantindo que o **AutoPSF** reconstrua os hidrogênios com precisão atômica, tornando a estrutura compatível com o campo de força escolhido para a simulação.
+Utilizaremos este protocolo para "limpar" a estrutura, removendo as coordenadas conflitantes e garantindo que o **AutoPSF** reconstrua os hidrogênios com geometria ideal, tornando o sistema estável para a simulação.
 
 Passo 1: Importação da Estrutura e Restrição de Ligações (Autobonds Off)
 
@@ -29,6 +29,8 @@ mol new seu_arquivo.pqr autobonds off
 ```
 
 Passo 2: Remover Hidrogênios e Salvar Átomos Pesados
+
+Utilizaremos este protocolo para higienizar a estrutura, removendo coordenadas de hidrogênio conflitantes enquanto preservamos a identidade química dos resíduos (como HSE e HSD). Isso garante que o AutoPSF reconstrua os hidrogênios "do zero" com geometria ideal, tornando a estrutura plenamente compatível com o campo de força escolhido.
 
 Salvaremos apenas os átomos pesados (noh), preservando os nomes de resíduos (ex: HSE, HSD) definidos na protonação.
 
