@@ -40,3 +40,7 @@ save 5XL0_clean.pdb
 ALTERAÇÃO (Nota sobre Nomenclatura): Optamos pelo `Internal naming scheme` em vez de `CHARMM` para evitar a inserção de indicadores `TER` no arquivo de output `.prq`. Isso previne a interrupção do processo pela caixa de erro *"Unparametrized Components"* no AutoPSF (VMD) durante a montagem da caixa (**Etapa 4**).
 5. Em **Additional Options**, deixe as seguintes caixas marcadas: `Ensure that new atoms are not rebuilt too close to existing atoms`, `Optimize the hydrogen bonding network` e `Remove the waters from the output file`.
 6. Por fim clique em **Start Job** e, ao finalizar, baixe o arquivo com extensão `.pqr`.
+
+**Próximos Passos: Entendendo os Arquivos de Estrutura**
+Ao final desta etapa, você terá o arquivo PQR necessário para gerar no VMD o arquivo PDB (coordenadas) e o arquivo PSF (topologia).
+Esses dois arquivos são complementares e essenciais para a construção do sistema. Sem o arquivo PSF, o software de simulação não saberá como os átomos devem interagir.
