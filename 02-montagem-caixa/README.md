@@ -55,7 +55,7 @@ mol new "protein_clean.pdb" type pdb
 Nesta etapa, unimos as informações de posição com as regras químicas do campo de força.
 
 Entendendo os Arquivos de Estrutura:
-* **Arquivo PDB:** Armazena as coordenadas atômicas $(x, y, z)$ do sistema, definindo a posição exata de cada átomo no espaço e a organização geral da estrutura.
+* **Arquivo PDB:** Armazena as coordenadas atômicas $(x, y, z)$, definindo a posição exata de cada átomo no espaço e a organização geral da estrutura.
 * **Arquivo PSF:** Armazena a topologia do sistema, definindo as ligações químicas, ângulos, diedros, cargas parciais e tipos de átomo
 
 ### Passo 1: Abrir o plugin e configurar topologias
