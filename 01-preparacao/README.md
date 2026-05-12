@@ -42,5 +42,7 @@ ALTERAÇÃO (Nota sobre Nomenclatura): Optamos pelo `Internal naming scheme` em 
 6. Por fim clique em **Start Job** e, ao finalizar, baixe o arquivo com extensão `.pqr`.
 
 **Próximos Passos: Entendendo os Arquivos de Estrutura**
+
 Ao final desta etapa, você terá o arquivo PQR necessário para gerar no VMD o arquivo PDB (coordenadas) e o arquivo PSF (topologia).
+
 Esses dois arquivos são complementares e essenciais para a construção do sistema. Sem o arquivo PSF, o software de simulação não saberá como os átomos devem interagir.
