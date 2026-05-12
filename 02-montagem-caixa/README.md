@@ -64,4 +64,7 @@ Clique em **Load input files** para carregar os parâmetros selecionados.
 Clique no botão **I'm feeling lucky**. O plugin irá analisar a cadeia, identificar os terminais da proteína e reconstruir os átomos ausentes.
 Uma mensagem de "Structure complete" aparecerá confirmando a criação dos novos arquivos.
 
-###Passo 3: Verificação dos Arquivos GeradosO AutoPSF criará dois arquivos essenciais no seu diretório de trabalho:  protein_clean_autopsf.pdb: Sua proteína agora completa, com todos os hidrogênios posicionados corretamente.protein_clean_autopsf.psf: O arquivo de topologia estrutural necessário para o NAMD.
+### Passo 3: Verificação dos Arquivos Gerados
+O AutoPSF criará dois arquivos essenciais no seu diretório de trabalho:
+* `protein_clean_autopsf.pdb`: Sua proteína agora completa, com todos os hidrogênios posicionados corretamente.
+* `protein_clean_autopsf.psf`: O arquivo de topologia estrutural necessário para o NAMD.
