@@ -4,7 +4,7 @@ Nesta etapa, utilizamos o **VMD (Visual Molecular Dynamics)** para preparar o si
 
 ## 4.1 Configurando o Diretório de Trabalho
 Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arquivos serão salvos. 
-> **Ajuste de Caminho (Windows):** Lembre-se de inverter as barras para `/`.
+> **Ajuste de caminho (Windows):** Lembre-se de inverter as barras para `/`.
 
 ```tcl
 cd D:/Caminho/Para/Sua/Pasta
@@ -18,7 +18,7 @@ Este erro ocorre porque o VMD tenta gerar automaticamente uma rede de ligações
 
 Utilizaremos este protocolo para "limpar" a estrutura, removendo as coordenadas conflitantes e garantindo que o **AutoPSF** reconstrua os hidrogênios com geometria ideal, tornando o sistema estável para a simulação.
 
-### Passo 1: Importação da Estrutura e Restrição de Ligações (Autobonds Off)
+### Passo 1: Importação da estrutura e restrição de ligações (autobonds Off)
 
 Para iniciar o procedimento, devemos carregar a molécula desativando a função de detecção automática de ligações (`autobonds off`). Isso permite que o VMD leia as coordenadas dos átomos sem tentar "adivinhar" ligações incorretas, evitando que o sistema trave ao encontrar hidrogênios sobrepostos.
 
@@ -28,7 +28,7 @@ Ainda no **Tk Console**, digite:
 mol new seu_arquivo.pqr autobonds off
 ```
 
-### Passo 2: Remover Hidrogênios e Salvar Átomos Pesados
+### Passo 2: Remover hidrogênios e exportação do PDB
 
 Nesta etapa, selecionaremos apenas os átomos pesados (noh) para gerar um novo arquivo PDB. Este procedimento descarta as coordenadas problemáticas de hidrogênio, mas mantém os nomes dos resíduos (ex: HSE, HSD) para a reconstrução correta da topologia.
 
