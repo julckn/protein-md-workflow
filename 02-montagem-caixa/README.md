@@ -53,7 +53,7 @@ Nesta etapa, utilizaremos o plugin **AutoPSF** para converter a lista de resídu
 ### Passo 1: Abrir o plugin e configurar topologias
 No menu principal do VMD, acesse: `Extensions > Modeling > Automatic PSF Builder`.
 
-Vai abrir a janela AutoPSF. Localize o painel *Topology files* na seção **Step 1: Input and Output Files**.
+Vai abrir a janela **AutoPSF**. Localize o painel *Topology files* na seção **Step 1: Input and Output Files**.
 
 **Importante:** O VMD carrega várias topologias por padrão. Para uma simulação de proteína sem ligantes, selecione e delete os arquivos desnecessários, mantendo apenas:
 * `top_all36_prot.rtf` (Parâmetros de proteínas).
