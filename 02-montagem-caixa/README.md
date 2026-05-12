@@ -5,8 +5,7 @@ Nesta etapa, utilizamos o **VMD (Visual Molecular Dynamics)** para preparar o si
 ## 4.1 Configurando o Diretório de Trabalho
 Abra o **Tk Console** em `Extensions > Tk Console` e defina a pasta onde os arquivos serão salvos. 
 
-> [!NOTE]
-Lembre-se de inverter as barras para `/` caso esteja trabalhando no Windows.
+> [!NOTE] Lembre-se de inverter as barras para `/` caso esteja trabalhando no Windows.
 
 ```tcl
 cd D:/Caminho/Para/Sua/Pasta
