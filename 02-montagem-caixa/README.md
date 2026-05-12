@@ -50,7 +50,7 @@ Nesta etapa, utilizaremos o plugin **AutoPSF** para converter a lista de resídu
 >***O que é a Topologia?***
 >Enquanto o arquivo PDB armazena apenas as coordenadas espaciais $(x, y, z)$ , o arquivo PSF define a inteligência química do sistema: ligações, ângulos, diedros, massas e cargas parciais. O AutoPSF utiliza arquivos de topologia do campo de força **CHARMM36** para ler essas regras e reconstruir todos os hidrogênios descartados na etapa anterior com precisão geométrica.
 
-### Passo 1: Abrir o Plugin e Configurar Topologias
+### Passo 1: Abrir o plugin e configurar topologias
 No menu principal do VMD, acesse: `Extensions > Modeling > Automatic PSF Builder`.
 
 Na janela que abrir, localize o painel *Topology files*.
@@ -59,7 +59,7 @@ Na janela que abrir, localize o painel *Topology files*.
 * `top_all36_prot.rtf` (Parâmetros de proteínas).
 * `toppar_water_ions.str` (Parâmetros de água e íons).
 
-### Passo 2: Geração da Estrutura
+### Passo 2: Geração da estrutura
 Clique em **Load input files** para carregar os parâmetros selecionados.
 Clique no botão **I'm feeling lucky**. O plugin irá analisar a cadeia, identificar os terminais da proteína e reconstruir os átomos ausentes.
 Uma mensagem de "Structure complete" aparecerá confirmando a criação dos novos arquivos.
