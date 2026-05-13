@@ -44,5 +44,5 @@ Isso previne a interrupção do processo pela caixa de erro *"Unparametrized Com
 
 >[!TIP]
 >**Próximos Passos:**
->Ao final desta etapa, você terá o arquivo **PQR** necessário para gerar no VMD (ETAPA 4) o arquivo **PDB** (coordenadas) e o arquivo **PSF** (topologia).
+>Ao final desta etapa, você terá o arquivo **PQR** necessário para gerar no VMD (ETAPA 4) os arquivos **PDB** (coordenadas) e **PSF** (topologia).
 >Esses dois arquivos são complementares e essenciais para a construção do sistema.
