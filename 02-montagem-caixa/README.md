@@ -73,7 +73,7 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 
 **Resultado esperado:** O VMD criará dois arquivos essenciais no diretório: 
 * `protein_clean_autopsf.pdb`: proteína com todos os hidrogênios posicionados corretamente.
-* `protein_clean_autopsf.psf`: arquivo de topologia necessário para o NAMD.
+* `protein_clean_autopsf.psf`: arquivo de topologia necessário para o NAMD, sem ele o software de simulação não saberá como os átomos devem interagir.
 
 **Confirme se eles foram salvos na pasta de trabalho.**
 
