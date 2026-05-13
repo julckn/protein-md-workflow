@@ -77,4 +77,4 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 
 **Confirme se eles foram salvos na pasta de trabalho.**
 
-> Nota de Eficiência: Se na **Etapa 3** você utilizou o `Internal naming scheme` no PDB2PQR, o AutoPSF concluirá esta etapa sem alertas de *"Unparametrized Components"*, gerando os arquivos `..._autopsf.pdb` e `..._autopsf.psf` instantaneamente.
+> **Nota:** Se na **Etapa 3** você utilizou o `Internal naming scheme` no **PDB2PQR**, o AutoPSF concluirá esta etapa sem alertas de *"Unparametrized Components"*, gerando os arquivos `..._autopsf.pdb` e `..._autopsf.psf` instantaneamente.
