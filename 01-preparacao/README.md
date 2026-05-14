@@ -33,7 +33,7 @@ save 5XL0_clean.pdb
 1. Acesse ao servidor [PDB2PQR](https://server.poissonboltzmann.org/pdb2pqr) (APBS).
 2. Faça o upload do arquivo .pdb (ex: *5XL0_clean.pdb*) gerado no Pymol.
 3. Em **pKa Options**: Marque a opção `Use PROPKA to assign protonation states` e insira o pH desejado (ex: 7.0).
-4. **Opções do Campo de Força (Crítico)**
+4. **Opções do Campo de Força (Crítico):**
 * **Forcefield:** Selecione `CHARMM`.
 * **Naming Scheme:** Selecione `Internal naming scheme`.
 >**NOTA SOBRE NOMENCLATURA:** Optamos pelo `Internal naming scheme` em vez de `CHARMM` para evitar a inserção de indicadores `TER` no arquivo de output `.prq`.
