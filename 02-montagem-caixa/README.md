@@ -51,11 +51,7 @@ mol new "protein_clean.pdb" type pdb
 
 ## 4.3 Geração da Topologia e Reconstrução de Hidrogênios (AutoPSF)
 
-Nesta etapa, unimos as informações de posição e topologia.
-
-Entendendo os arquivos de estrutura:
-* **Arquivo PDB:** Armazena as coordenadas atômicas $(x, y, z)$ do sistema, definindo a conformação espacial da estrutura atômica.
-* **Arquivo PSF:** Armazena a topologia, definindo as ligações químicas, ângulos, diedros, massas, cargas parciais e tipos de átomos.
+Nesta etapa, realizamos a convergência entre as coordenadas cartesianas (PDB) e as definições topológicas (PSF). Utilizamos o plugin AutoPSF para integrar a geometria do modelo às restrições físico-químicas da topologia, permitindo a reconstrução dos hidrogênios e a definição das cargas parciais de acordo com os parâmetros do campo de força (ex: CHARMM36). Este processo é fundamental para transformar um modelo estático em uma entidade física capaz de ser processada pelo motor de cálculo do NAMD.
 
 ### Passo 1: Abrir o plugin e configurar topologias
 No menu principal do VMD, acesse: `Extensions` > `Modeling` > `Automatic PSF Builder`.
@@ -72,8 +68,8 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 3. Uma mensagem de *"Structure complete"* aparecerá confirmando a criação dos novos arquivos.
 
 **Resultado esperado:** O VMD criará dois arquivos essenciais no diretório: 
-* `protein_clean_autopsf.pdb`: proteína com todos os hidrogênios posicionados corretamente.
-* `protein_clean_autopsf.psf`: arquivo de topologia necessário para o NAMD, sem ele o software de simulação não saberá como os átomos devem interagir.
+* `protein_clean_autopsf.pdb`: Atua como o vetor de estado inicial do sistema. Ele fornece as coordenadas cartesianas $(x, y, z)$ que definem a configuração conformacional instantânea da proteína, agora com todos os hidrogênios posicionados conforme os comprimentos de ligação de equilíbrio.
+* `protein_clean_autopsf.psf`: (O Domínio Energético): Define a identidade física da molécula. Este arquivo mapeia a topologia química, atribuindo a cada átomo os parâmetros fundamentais para o cálculo das interações de não-ligação (cargas parciais e raios de van der Waals) e de ligação (constantes de mola para ângulos e diedros).
 
 **Confirme se eles foram salvos na pasta de trabalho.**
 
