@@ -51,7 +51,7 @@ mol new "protein_clean.pdb" type pdb
 
 ## 4.3 Geração da Topologia e Reconstrução de Hidrogênios (AutoPSF)
 
-Nesta etapa, unimos as informações de posição com as regras químicas do campo de força.
+Nesta etapa, unimos as informações de posição e topologia.
 
 Entendendo os arquivos de estrutura:
 * **Arquivo PDB:** Armazena as coordenadas atômicas $(x, y, z)$ do sistema, definindo a conformação espacial da estrutura atômica.
