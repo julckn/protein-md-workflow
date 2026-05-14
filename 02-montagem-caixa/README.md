@@ -68,8 +68,8 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 3. Uma mensagem de *"Structure complete"* aparecerá confirmando a criação dos novos arquivos.
 
 **Resultado esperado:** O VMD criará dois arquivos essenciais no diretório: 
-* `protein_clean_autopsf.pdb`: Fornece as coordenadas cartesianas $(x, y, z)$ que definem a configuração tridimensional da proteína, com todos os hidrogênios posicionados conformeos comprimentos de ligação de equilíbrio.
-* `protein_clean_autopsf.psf`: Mapeia a topologia química, atribuindo a cada átomo os parâmetros fundamentais para o cálculo das interações não-covalentes (cargas parciais e raios de van der Waals) e covalentes (constantes de força para ligações, ângulos e termos de torção/diedros).
+* `protein_clean_autopsf.pdb`: Fornece as coordenadas cartesianas $(x, y, z)$ que definem a configuração tridimensional da proteína.
+* `protein_clean_autopsf.psf`: Contém todos as informações necessárias para aplicar um campo de força particular (CHARMM neste caso) a um sistema molecular.
   
 **Confirme se eles foram salvos na pasta de trabalho.**
 
