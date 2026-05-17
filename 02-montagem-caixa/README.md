@@ -70,7 +70,7 @@ Ao abrir a janela **AutoPSF**, localize o painel *Topology files* na seção **S
 * Isola a estrutura molecular limpa (**Step 2**).
 * Reconstrói os hidrogênios e define os terminais N-ter e C-ter (**Step 3**).
 * Faz a varredura e aplicação do patch `DISU` (disulfide bond) para pontes de dissulfeto (**Step 4**).
-3. Uma mensagem de *"Structure complete"* (janela de aviso) aparecerá na tela, confirmando a criação dos novos arquivos.
+3. Uma mensagem de *"Structure complete"* (em janela de aviso) aparecerá na tela, confirmando a criação dos novos arquivos.
 
 **Resultado esperado:** O VMD criará dois arquivos essenciais no diretório: 
 * `protein_clean_autopsf.pdb`: Fornece as coordenadas cartesianas $(x, y, z)$ que definem a configuração tridimensional da proteína.
